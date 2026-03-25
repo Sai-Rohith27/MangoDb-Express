@@ -4,6 +4,7 @@ const port=9099;
 const path=require("path");
 const mongose=require("mongoose");
 const mongoose = require('mongoose');
+console.log("welcome to app");
 app.set("views",path.join(__dirname,"views"));
 app.set("view engine","ejs");
 main().then(()=>{
@@ -19,3 +20,4 @@ app.get("/",(req,res)=>{
 app.listen(port,()=>{
     console.log(`server running on ${port}...`);
 })
+
