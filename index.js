@@ -26,6 +26,7 @@ chat1.save().then((res)=>{console.log(res)}).catch((err)=>{console.log(err)});
 
 app.get("/chats",async(req,res)=>{
    let chats= await chat.find();//async function to get data it returns promise 
+   console.log(chats);
    res.send("working");
 });
 app.get("/",(req,res)=>{
