@@ -10,7 +10,6 @@ main().then(()=>{
 async function main() {
   await mongoose.connect('mongodb://127.0.0.1:27017/whatsapp');   
 }
-
 let allchats=[
     {
           from:"Sai",
@@ -34,6 +33,12 @@ let allchats=[
         to:"rohitjh",
         msg:"Hey howru by the way?",
         created: new Date()
+    },
+    {
+        from:"someone",
+        to:"someone",
+        msg:"Something",
+        created:new Date()
     }
 ];
 
