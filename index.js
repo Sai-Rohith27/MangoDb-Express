@@ -7,6 +7,7 @@ const chat=require("./models/chats");
 console.log("welcome to app");
 app.set("views",path.join(__dirname,"views"));
 app.set("view engine","ejs");
+app.use(express.static(path.join(__dirname,"public")));
 main().then(()=>{
     console.log("Connection Successfull!");
 }).catch(err => console.log(err));
@@ -27,10 +28,10 @@ chat1.save().then((res)=>{console.log(res)}).catch((err)=>{console.log(err)});
 app.get("/chats",async(req,res)=>{
    let chats= await chat.find();//async function to get data it returns promise 
    console.log(chats);
-   res.send("working");
+     res.render("index",{chats});
 });
 app.get("/",(req,res)=>{
-    res.send("Welcome");
+   res.send("Working");
 });
 app.listen(port,()=>{
     console.log(`server running on ${port}...`);
