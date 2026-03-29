@@ -19,14 +19,16 @@
                 <p>from:<%=ch.from%></p>
             <div class="msg">
                 <p><%=ch.msg%></p>
+                <form method="GET" action="/chats/<%=ch.id%>/edit">
+                    <button>Edit chat!</button>
+                </form>
             </div>
             <p>Recieved by: <i><%=ch.to%></i></p>
                   <p><%=ch.created.toString().split(" ")[4]%></p>
                   <p><%=ch.created.toString().split(" ").slice(0,4).join("-")%></p>
-
               </div>
               <br><br>
-        
+               
               </div>
         <%}%>
 </body>
