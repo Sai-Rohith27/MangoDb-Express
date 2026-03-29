@@ -21,8 +21,12 @@
                 <p><%=ch.msg%></p>
             </div>
             <p>Recieved by: <i><%=ch.to%></i></p>
+                  <p><%=ch.created.toString().split(" ")[4]%></p>
+                  <p><%=ch.created.toString().split(" ").slice(0,4).join("-")%></p>
+
               </div>
               <br><br>
+        
               </div>
         <%}%>
 </body>
